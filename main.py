@@ -1,18 +1,18 @@
-"""One line: the funniest commit message for the worst fix ever.
+"""Commit-message entry for make.fun: one line, at most 100 chars.
 
-Writes a single line (69 chars, cap 100) to /output/entry.txt.
+The program writes LINE verbatim to /output/entry.txt (69 chars).
 """
 
 from pathlib import Path
 
 LINE = "fix(tests): silence flaky test by deleting the only check that ran it"
-
-OUT = Path("/output/entry.txt")
+ENTRY_PATH = Path("/output/entry.txt")
 
 
 def main() -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(LINE, encoding="utf-8")
+    """Write the entry text, creating /output when needed."""
+    ENTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ENTRY_PATH.write_text(LINE, encoding="utf-8")
 
 
 if __name__ == "__main__":
