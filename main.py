@@ -1,6 +1,6 @@
 """One line: the funniest commit message for the worst fix ever.
 
-Writes a single line to /output/entry.txt.
+Writes a single line (69 chars, cap 100) to /output/entry.txt.
 """
 
 from pathlib import Path
